@@ -1,2 +1,2 @@
-# bootcamp.project1
+# NCBI Query
 Group project
