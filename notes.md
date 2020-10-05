@@ -3,24 +3,35 @@ https://www.ncbi.nlm.nih.gov/books/NBK53758/
 
 
 
-Structure drawing iCn3D web apis
+# Structure drawing iCn3D web apis
 https://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d.html
 
 
 
 
-Entrez
+# Entrez
 https://www.ncbi.nlm.nih.gov/books/NBK25500/#chapter1.Searching_a_Database
 
 
-How to retrieve all structures from a particular source organism or taxon
+# How to retrieve all structures from a particular source organism or taxon
 
 https://www.ncbi.nlm.nih.gov/Structure/MMDB/docs/mmdb_how_to_search_by_taxon.html
 
 
-NCBI HELP MANUAL
+# NCBI HELP MANUAL
 
 https://www.ncbi.nlm.nih.gov/books/NBK3831/
 
-DOCS
+# DOCS
 https://www.ncbi.nlm.nih.gov/home/documentation/
+
+
+# Models
+## Tobacco mosaic virus
+https://en.wikipedia.org/wiki/Tobacco_mosaic_virus
+## E.coli
+https://en.wikipedia.org/wiki/Escherichia_coli
+## Yeast
+https://en.wikipedia.org/wiki/Saccharomyces_cerevisiae
+
+
