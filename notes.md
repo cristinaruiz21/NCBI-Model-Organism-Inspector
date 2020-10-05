@@ -12,3 +12,15 @@ https://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d.html
 Entrez
 https://www.ncbi.nlm.nih.gov/books/NBK25500/#chapter1.Searching_a_Database
 
+
+How to retrieve all structures from a particular source organism or taxon
+
+https://www.ncbi.nlm.nih.gov/Structure/MMDB/docs/mmdb_how_to_search_by_taxon.html
+
+
+NCBI HELP MANUAL
+
+https://www.ncbi.nlm.nih.gov/books/NBK3831/
+
+DOCS
+https://www.ncbi.nlm.nih.gov/home/documentation/
