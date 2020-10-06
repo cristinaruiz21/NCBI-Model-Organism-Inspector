@@ -10,17 +10,64 @@
     
     
     <title>NCBI Model Orgnaism Inspector</title>
-
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
+    <div class="header" id="banner">
+        <div class="centered">
+            <h1>NCBI Database Model Organism Inspector</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="columns">
+          <div class="column col-6">
+            <h1 class="question1">Choose which virus you would like to know more about:</h1>
+            <h1 class="hide" id="question2">Choose which gene you would like to know more about:</h1>
+            <div class="columns">
+              <div class="column col-12">
+                <button class="btn btn-organism">HIV</button>
+              </div>
+              <div class="column col-12">
+                <button class="btn btn-organism">HSV1</button>
+              </div>
+              <div class="column col-12">
+                <button class="btn btn-organism">Tobacco mosaic virus</button>
+              </div>
+            </div>
+          </div>
+          <div class="column col-6">
+            <div class="video-responsive video-responsive-4-3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0h5Jd7sgQWY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+          </div>
+        </div>
+        <div class="hide" id="gene-list">
+            <div class="column col-12">
+                <button class="btn btn-gene"></button>
+            </div>
+          </div>
+          <div class="hide" id="gene-img">
+            <div class="column col-12">
+                <button class="btn btn-img"></button>
+            </div>
+          </div>
+          <div class="hide" id="gene-data">
+            <div class="column col-12">
+                <button class="btn btn-data"></button>
+            </div>
+          </div>
+      </div>
   
-    <script src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/lib/jquery.min.js"></script>
-    <script src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/lib/jquery-ui.min.js"></script>
-    <script src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/lib/three.min.js"></script>
-    <script src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d_simple_ui.min.js"></script>
-    <script src="./script.js"></script>
+      <script src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/lib/jquery.min.js"></script>
+      <script src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/lib/jquery-ui.min.js"></script>
+      <script src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/lib/three.min.js"></script>
+      <script src="https://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d_simple_ui.min.js"></script>
+      <script src="./script.js"></script>
 </body>
-
 </html>
