@@ -3,9 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NBMOI</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <div class="header" id="banner">
+        <div class="centered">
+            <h1>NCBI Database Model Organism Inspector</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="columns">
+            <h1 class="question1">Choose which organism you would like to know more about:</h1>
+            <h1 class="hide" id="question2">Choose which gene you would like to know more about:</h1>
+          <div class="column col-12">
+            <button class="btn btn-organism">Yeast</button>
+          </div>
+          <div class="column col-12">
+            <button class="btn btn-organism">Virus</button>
+          </div>
+          <div class="column col-12">
+            <button class="btn btn-organism">E. coli</button>
+          </div>
+          <div class="hide" id="gene-list">
+            <div class="column col-12">
+                <button class="btn btn-gene"></button>
+            </div>
+          </div>
+          <div class="hide" id="gene-img">
+            <div class="column col-12">
+                <button class="btn btn-img"></button>
+            </div>
+          </div>
+          <div class="hide" id="gene-data">
+            <div class="column col-12">
+                <button class="btn btn-data"></button>
+            </div>
+          </div>
+        </div>
+    </div>
     
 </body>
 </html>

@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+.header{
+    text-align: center;
+    color: white;
+    position: relative;
+    height: 200px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+.img-fit-contain{
+    height: 300px;
+    width: 900px;
+}
+#banner {
+    padding: 24px 24px;
+    margin-bottom: 0px;
+    background-image: url(bacteria-and-virus.png);
+    background-position: center;
+    position: relative;
+    height: 250px;
+    color: white;
+}
+body{
+    background: url("grey-linen-texture-background.png");
+}
+
+.btn{
+    background-color: black;
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    height: 100px;
+    width: 500px;
+    font-size: 30px;
+    margin: 15px;
+}
+.btn:active{
+        color:black;
+}
+.btn:hover{
+    color:black;
+}
+.question1{
+    font-size: 25px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.hide{
+    display: none;
+}
