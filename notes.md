@@ -35,3 +35,8 @@ https://en.wikipedia.org/wiki/Escherichia_coli
 https://en.wikipedia.org/wiki/Saccharomyces_cerevisiae
 
 
+# Entrez E-utilities
+
+## Base search url => https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi
+## &retmode=JSON for JSON output of Entrez queries
+
