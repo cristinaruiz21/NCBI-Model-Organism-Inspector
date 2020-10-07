@@ -107,7 +107,7 @@ async function fetchProtein(uid) {
     }).then(function (response) {
       console.log(response);
       // !! This is a list of of links from gene to struct UIDs
-      if (!response.linksets.hasOwnProperty('linksetdbs')) {
+      if (!response.linksets[0].hasOwnProperty('linksetdbs')) {
         $('.proteins-list')
           .before(
             $('<div>')
