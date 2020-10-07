@@ -2,10 +2,11 @@ let orgQueryID = "";
 let chosenProtein = "";
 let geneToStructLinks = "";
 
+//* Preset choices => "HSV1" "HIV" "tobacco_mosaic_virus"
 // Get the genes for organism to be studied
 // TODO interpolate user choice of model organism
 $.ajax({
-  url: `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gene&term=Ateline_alphaherpesvirus_1[organism]&retmax=1000&retmode=JSON`,
+  url: `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gene&term=hiv[organism]&retmax=1000&retmode=JSON`,
   method: "GET",
 }).then(function (response) {
   console.log(response);
@@ -37,7 +38,7 @@ $.ajax({
       console.log(response);
       // !! This is a list of of links from gene to struct UIDs
       geneToStructLinks = response.linksets[0].linksetdbs[0].links;
-      console.log(`Here are the links from structure db ${geneToStructLinks}`);
+      console.log(`Here are the UIDs from structure db ${geneToStructLinks}`);
 
       // Get structure for gene product
       // TODO use structure UIDs to generate a iCn3D query
