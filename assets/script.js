@@ -83,20 +83,18 @@ async function fetchGenes(organism) {
         console.log(res.result[uid]);
       }
 
-      $('.container').first().append(
-        $('<ul>')
-          .addClass('proteins-list')
-          .append(
-            res.result.uids
-              .map(uid => res.result[uid])
-              .filter(geneInfo => geneInfo.name !== 'NEWENTRY')
-              .map(geneInfo => 
-                $('<li>')
-                  .text(geneInfo.name)
-                  .on('click', e => fetchProtein(geneInfo.uid))
-              )
-          )
-      );
+      $('.proteins-list')
+        .empty()
+        .append(
+          res.result.uids
+            .map(uid => res.result[uid])
+            .filter(geneInfo => geneInfo.name !== 'NEWENTRY')
+            .map(geneInfo => 
+              $('<li>')
+                .text(geneInfo.name)
+                .on('click', e => fetchProtein(geneInfo.uid))
+            )
+        )
     });
 }
 
@@ -108,8 +106,8 @@ async function fetchProtein(uid) {
       console.log(response);
       // !! This is a list of of links from gene to struct UIDs
       if (!response.linksets[0].hasOwnProperty('linksetdbs')) {
-        $('.proteins-list')
-          .before(
+        $('.alerts')
+          .append(
             $('<div>')
               .addClass('toast toast-error')
               .text('No protein visualization could be found :/')
@@ -120,7 +118,8 @@ async function fetchProtein(uid) {
                     $(this).parent().remove();
                   })
               )
-          )
+          );
+          
         return;
       }
       geneToStructLinks = response.linksets[0].linksetdbs[0].links;
@@ -159,4 +158,6 @@ async function fetchProtein(uid) {
     });
 }
 
-fetchGenes('tobacco_mosaic_virus')
+$('.btn-organism').on('click', function (e) {
+  fetchGenes($(this).attr('data-organism'));
+});
