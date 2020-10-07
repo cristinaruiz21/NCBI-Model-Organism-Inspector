@@ -27,6 +27,10 @@
     height: 250px;
     color: white;
 }
+#banner h1 {
+    padding: 12px;
+    background-color: #4d9708ae;
+}
 body{
     background: url("grey-linen-texture-background.png");
 }
