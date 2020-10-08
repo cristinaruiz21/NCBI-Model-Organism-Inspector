@@ -38,13 +38,13 @@
                 <h1 class="hide" id="question2">Choose which gene you would like to know more about:</h1>
                 <div class="columns">
                     <div class="column col-12">
-                        <button class="btn btn-organism">HIV</button>
+                        <button class="btn btn-organism" data-organism="hiv">HIV</button>
                     </div>
                     <div class="column col-12">
-                        <button class="btn btn-organism">HSV1</button>
+                        <button class="btn btn-organism" data-organism="hsv1">HSV1</button>
                     </div>
                     <div class="column col-12">
-                        <button class="btn btn-organism">Tobacco mosaic virus</button>
+                        <button class="btn btn-organism" data-organism="tobacco_mosaic_virus">Tobacco mosaic virus</button>
                     </div>
                 </div>
             </div>
@@ -72,6 +72,14 @@
             </div>
         </div>
     </div>
+
+    <!-- Container for alerts about API requests -->
+    <div class="alerts"></div>
+
+    <!-- Where the clickable protein list goes -->
+    <ul class="proteins-list"></ul>
+
+    <!-- Container for the visualization -->
     <div id="icn3dwrap"></div>
 
 
