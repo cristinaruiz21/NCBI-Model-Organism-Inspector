@@ -1,3 +1,51 @@
+let structureHistory = {
+  _maxLength: 5,
+  _storageKey: 'structureHistory',
+  _items: [],
+
+  _enqueue(pdbid, structure) {
+    this._items.unshift({pdbid, structure});
+  },
+
+  _dequeue() {
+    this._items.pop();
+  },
+
+  addStructure(pdbid, structure) {
+    // If the structure already exists, just move it to the top of the structureHistory
+    let existing = this._items.find(v => v.pdbid === pdbid);
+    if (existing !== undefined) {
+      let existingIndex = this._items.indexOf(existing);
+      this._items.splice(existingIndex, 1);
+      this._enqueue(existing);
+    } else {
+      console.log('Adding structure')
+      this._enqueue(pdbid, structure);
+      this._items.length > this._maxLength && this._dequeue();
+    }
+  },
+
+  getIfPresent(pdbid) {
+    return this._items.find(v => v.pdbid === pdbid);
+  },
+
+  save() {
+    localStorage.setItem(this._storageKey, JSON.stringify(this._items));
+  },
+
+  load() {
+    this._items = JSON.parse(localStorage.getItem(this._storageKey)) ?? [];
+  }
+}
+
+$(document).ready(() => {
+  structureHistory.load();
+});
+
+window.onunload = () => {
+  structureHistory.save();
+}
+
 async function fetchGenes(organism) {
   // list of genes
   let { esearchresult } = await $.get(
@@ -56,7 +104,8 @@ function displayStructure(pdbid) {
   cfg["mmdbid"] = pdbid;
   if (Object.keys(options).length > 0) cfg["options"] = options;
 
-  var icn3dui = new iCn3DUI(cfg);
+  var icn3dui = structureHistory.getIfPresent(pdbid) ?? new iCn3DUI(cfg);
+  structureHistory.addStructure(pdbid, icn3dui);
 
   //communicate with the 3D viewer with chained functions
   $.when(icn3dui.show3DStructure()).then(function () {
@@ -67,3 +116,4 @@ function displayStructure(pdbid) {
 $('.btn-organism').on('click', function (e) {
   fetchGenes($(this).attr('data-organism'));
 });
+
