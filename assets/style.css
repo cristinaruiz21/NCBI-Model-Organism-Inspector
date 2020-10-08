@@ -40,9 +40,9 @@ body{
     color: white;
     font-family: 'Open Sans Condensed', sans-serif;
     height: 100px;
-    width: 500px;
+    width: 90%;
     font-size: 30px;
-    margin: 15px;
+    margin: 15px auto;
 }
 .btn:active{
         color:black;
@@ -60,8 +60,8 @@ body{
     display: none;
 }
 .video-responsive{
-    margin: 15px;
-    width: 600px;
+    margin: 15px auto;
+    width: 90%;
     height: 500px;
 }
 li{
@@ -76,4 +76,7 @@ li{
   border-style: solid;
   border-width: 0.2mm;
   margin-bottom: 15px;
+}
+#icn3dwrap{
+    width: 100%;    
 }

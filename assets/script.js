@@ -81,26 +81,10 @@ async function fetchGenes(organism) {
   $.get(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=gene&db=structure&id=${esearchresult.idlist}&retmode=JSON&key=1c1a030e06f70a410fc507821bb474459d08`)
     .then(res => {
       console.log(res);
-      let structs = res.linksets[0].linksetdbs[0].links
-      /* for (let uid of res.result.uids) {
-        console.log(res.result[uid]);
-        console.log(result);
-      } */
-      
-      $('.container').first().append(
-        $('<ul>')
-          .addClass('proteins-list')
-          .append(
-            res.result.uids
-              .map(uid => structs)
-              .filter(geneInfo => geneInfo.name !== 'NEWENTRY')
-              .map(geneInfo => 
-                $('<li>')
-                  .text(geneInfo.name)
-                  .on('click', e => fetchProtein(geneInfo.uid))
-              )
-          )
-      );
+      // for (let uid of res.result.uids) {
+      //   console.log(uid, res.result[uid]);
+      // }
+
       $('.proteins-list')
         .empty()
         .append(
@@ -116,7 +100,7 @@ async function fetchGenes(organism) {
     });
 }
 
-async function fetchProtein(uid) {
+async function fetchProtein(organism, structs) {
   $.ajax({
       url: `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=structure&term=${organism}[organism]&ID=${structs}&retmax=1000&retmode=JSON`,
       method: "GET",
@@ -172,7 +156,7 @@ async function fetchProtein(uid) {
       });
 
       // Get structure for gene product
-      // TODO use structure UIDs to generate a iCn3D query
+      //   TODO use structure UIDs to generate a iCn3D query
       // TODO Render iCn3D window
     });
 }
