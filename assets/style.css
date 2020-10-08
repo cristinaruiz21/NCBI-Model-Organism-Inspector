@@ -64,3 +64,16 @@ body{
     width: 600px;
     height: 500px;
 }
+li{
+    float: left;
+  list-style: none;
+  text-align: center;
+  background-color:white;
+  color: black;
+  margin-right: 30px;
+  width: 150px;
+  line-height: 60px;
+  border-style: solid;
+  border-width: 0.2mm;
+  margin-bottom: 15px;
+}
