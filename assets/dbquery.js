@@ -23,6 +23,7 @@ async function fetchGenes(organism) {
       console.log(response);
       //!! Save the list of UIDs
     });
+    
     $(".container")
       .first()
       .append(
