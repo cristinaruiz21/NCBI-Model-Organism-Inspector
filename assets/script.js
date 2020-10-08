@@ -51,6 +51,8 @@ async function fetchGenes(organism) {
   let { esearchresult } = await $.get(
     `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gene&term=${organism}[organism]&retmax=1000&retmode=JSON&key=1c1a030e06f70a410fc507821bb474459d08`
   );
+  $(".container").addClass("hide");
+  $("#question2").removeClass("hide");
   console.log(esearchresult);
   // Gene to Structure conversion
   $.get(
