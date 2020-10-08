@@ -80,3 +80,11 @@ li{
 #icn3dwrap{
     width: 100%;    
 }
+.navbar{
+    background-color: rgb(109, 107, 107);
+    height:50px;
+}
+.btn.btn-link{
+    color:white;
+    font-size: larger;
+}
