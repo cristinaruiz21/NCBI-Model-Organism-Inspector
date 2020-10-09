@@ -35,7 +35,7 @@ body{
     background: url("grey-linen-texture-background.png");
 }
 
-.btn{
+.btn-organism{
     background-color: black;
     color: white;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -44,10 +44,10 @@ body{
     font-size: 30px;
     margin: 15px auto;
 }
-.btn:active{
+.btn-organism:active{
         color:black;
 }
-.btn:hover{
+.btn-organism:hover{
     color:black;
 }
 .question1{
@@ -66,19 +66,22 @@ body{
 }
 li{
     float: left;
-  list-style: none;
-  text-align: center;
-  background-color:white;
-  color: black;
-  margin-right: 30px;
-  width: 150px;
-  line-height: 60px;
-  border-style: solid;
-  border-width: 0.2mm;
-  margin-bottom: 15px;
+    list-style: none;
+    text-align: center;
+    background-color:white;
+    color: black;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    width: 150px;
+    line-height: 60px;
+    border-style: solid;
+    border-width: 0.2mm;  
 }
-#icn3dwrap{
-    width: 100%;    
+li:active{
+    background-color: mediumseagreen;
+}
+li:hover{
+    background-color: mediumseagreen;
 }
 .navbar{
     background-color: rgb(109, 107, 107);
