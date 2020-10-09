@@ -22,6 +22,8 @@
     padding: 24px 24px;
     margin-bottom: 0px;
     background-image: url(bacteria-and-virus.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
     background-position: center;
     position: relative;
     height: 250px;
